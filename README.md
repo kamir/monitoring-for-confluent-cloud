@@ -27,4 +27,5 @@ The credentials for a particular cluster are given by an API key and the related
 ## How to query the metrics API?
 ```
   http -v https://api.telemetry.confluent.cloud/v1/metrics/cloud/attributes --auth $CCAccount < q1.json
-'''
+```
+
