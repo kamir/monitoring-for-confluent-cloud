@@ -1,0 +1,19 @@
+GET /v1/metrics/cloud/descriptors HTTP/1.1
+User-Agent: HTTPie/2.0.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: Basic bWlya29AY29uZmx1ZW50LmlvOjA0MDlBcmtvbmEj
+Host: api.telemetry.confluent.cloud
+
+HTTP/1.1 200 OK
+content-encoding: gzip
+content-type: application/json
+date: Tue, 03 Mar 2020 18:53:37 GMT
+server: envoy
+vary: Accept-Encoding
+x-envoy-upstream-service-time: 1
+Content-Length: 380
+Connection: keep-alive
+
+{"data":[{"name":"io.confluent.kafka.server/received_bytes/delta","type":"GAUGE_INT64","description":"The delta count of bytes received from the network. Each sample is the number of bytes received since the previous data sample. The count is sampled every 60 seconds.","unit":"By","labels":[{"key":"cluster_id","description":"ID of the Kafka cluster"},{"key":"topic","description":"Name of the Kafka topic"}]},{"name":"io.confluent.kafka.server/sent_bytes/delta","type":"GAUGE_INT64","description":"The delta count of bytes sent over the network. Each sample is the number of bytes sent since the previous data point. The count is sampled every 60 seconds.","unit":"By","labels":[{"key":"cluster_id","description":"ID of the Kafka cluster"},{"key":"topic","description":"Name of the Kafka topic"}]},{"name":"io.confluent.kafka.server/retained_bytes","type":"GAUGE_INT64","description":"The current count of bytes retained by the cluster, summed across all partitions. The count is sampled every 60 seconds.","unit":"By","labels":[{"key":"cluster_id","description":"ID of the Kafka cluster"},{"key":"topic","description":"Name of the Kafka topic"}]}],"meta":{"pagination":{"page_size":1000,"total_size":3}},"links":{}}
