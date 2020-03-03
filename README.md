@@ -35,3 +35,8 @@ The credentials for a particular cluster are given by an API key and the related
 - io.confluent.kafka.server/sent_bytes/delta
 - io.confluent.kafka.server/retained_bytes
 
+## Query examples
+
+The official documentation provdes some examples for retrieving aggregated metrics: https://docs.confluent.io/current/cloud/metrics-api.html
+
+
