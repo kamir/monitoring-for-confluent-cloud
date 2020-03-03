@@ -38,7 +38,7 @@ By default, the demo uses Confluent Schema Registry running in a local Docker co
    b. Validate your credentials to Confluent Cloud Schema Registry
 
    ```bash
-   $ curl -u <SR API KEY>:<SR API SECRET> https://<SR ENDPOINT>/subjects
+   $ curl -u $SRKEY https://psrc-4v1qj.eu-central-1.aws.confluent.cloud/subjects
    ```
 
 ## Step 3
