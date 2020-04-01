@@ -1,0 +1,11 @@
+bootstrap.servers=pkc-43n10.us-central1.gcp.confluent.cloud:9092
+ssl.endpoint.identification.algorithm=https
+security.protocol=SASL_SSL
+sasl.mechanism=PLAIN
+sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username\="HWQDLB47A4EYDLKQ" password\="ZZrtBuQm+5In5nwCSnPoy9TENt9WpkNkcVWQFuVUd/FaMaaVf1DGrKdGiD/KxoT7";
+
+# If you are using Confluent Cloud Schema Registry, add the following configuration parameters
+basic.auth.credentials.source=USER_INFO
+schema.registry.basic.auth.user.info=DEVXOMUULJZALNZ7:vqpwKTXw5UaZbSoP9PDFaDIKqbxMMlyFWg0yGK/QutI5UUg1qe91J+SdZhIAzhG5
+schema.registry.url=https://psrc-4v1qj.eu-central-1.aws.confluent.cloud
+

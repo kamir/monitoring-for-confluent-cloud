@@ -5,16 +5,6 @@
             "metric": "io.confluent.kafka.server/sent_bytes/delta"
         }
     ],
-    "filter": {
-        "filters": [
-            {
-                "field": "metric.label.cluster_id",
-                "op": "EQ",
-                "value": "lkc-387om"
-            }
-        ],
-        "op": "AND"
-    },
     "granularity": "PT1M",
     "group_by": [
         "metric.label.topic"

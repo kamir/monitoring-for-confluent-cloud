@@ -1,0 +1,32 @@
+# Configuration derived from /Users/mkampf/.ccloud/config
+bootstrap.servers=pkc-43n10.us-central1.gcp.confluent.cloud:9092
+ssl.endpoint.identification.algorithm=https
+security.protocol=SASL_SSL
+sasl.mechanism=PLAIN
+sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username\="HWQDLB47A4EYDLKQ" password\="ZZrtBuQm+5In5nwCSnPoy9TENt9WpkNkcVWQFuVUd/FaMaaVf1DGrKdGiD/KxoT7";
+basic.auth.credentials.source=USER_INFO
+schema.registry.basic.auth.user.info=DEVXOMUULJZALNZ7:vqpwKTXw5UaZbSoP9PDFaDIKqbxMMlyFWg0yGK/QutI5UUg1qe91J+SdZhIAzhG5
+schema.registry.url=https://psrc-4v1qj.eu-central-1.aws.confluent.cloud
+
+# Confluent Monitoring Interceptor specific configuration
+confluent.monitoring.interceptor.bootstrap.servers=pkc-43n10.us-central1.gcp.confluent.cloud:9092
+confluent.monitoring.interceptor.ssl.endpoint.identification.algorithm=https
+confluent.monitoring.interceptor.security.protocol=SASL_SSL
+confluent.monitoring.interceptor.sasl.mechanism=PLAIN
+confluent.monitoring.interceptor.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username\="HWQDLB47A4EYDLKQ" password\="ZZrtBuQm+5In5nwCSnPoy9TENt9WpkNkcVWQFuVUd/FaMaaVf1DGrKdGiD/KxoT7";
+
+# KSQL Server specific configuration
+producer.interceptor.classes=io.confluent.monitoring.clients.interceptor.MonitoringProducerInterceptor
+consumer.interceptor.classes=io.confluent.monitoring.clients.interceptor.MonitoringConsumerInterceptor
+ksql.streams.producer.retries=2147483647
+ksql.streams.producer.confluent.batch.expiry.ms=9223372036854775807
+ksql.streams.producer.request.timeout.ms=300000
+ksql.streams.producer.max.block.ms=9223372036854775807
+ksql.streams.replication.factor=3
+ksql.internal.topic.replicas=3
+ksql.sink.replicas=3
+
+# Confluent Schema Registry configuration for KSQL Server
+ksql.schema.registry.basic.auth.credentials.source=USER_INFO
+ksql.schema.registry.basic.auth.user.info=DEVXOMUULJZALNZ7:vqpwKTXw5UaZbSoP9PDFaDIKqbxMMlyFWg0yGK/QutI5UUg1qe91J+SdZhIAzhG5
+ksql.schema.registry.url=https://psrc-4v1qj.eu-central-1.aws.confluent.cloud

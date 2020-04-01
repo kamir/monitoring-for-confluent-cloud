@@ -1,0 +1,33 @@
+replication.factor=3
+config.storage.replication.factor=3
+offset.storage.replication.factor=3
+status.storage.replication.factor=3
+bootstrap.servers=pkc-43n10.us-central1.gcp.confluent.cloud:9092
+ssl.endpoint.identification.algorithm=https
+security.protocol=SASL_SSL
+sasl.mechanism=PLAIN
+sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username\="HWQDLB47A4EYDLKQ" password\="ZZrtBuQm+5In5nwCSnPoy9TENt9WpkNkcVWQFuVUd/FaMaaVf1DGrKdGiD/KxoT7";
+
+# Connect producer and consumer specific configuration
+producer.ssl.endpoint.identification.algorithm=https
+producer.confluent.monitoring.interceptor.ssl.endpoint.identification.algorithm=https
+consumer.ssl.endpoint.identification.algorithm=https
+consumer.confluent.monitoring.interceptor.ssl.endpoint.identification.algorithm=https
+producer.security.protocol=SASL_SSL
+producer.confluent.monitoring.interceptor.security.protocol=SASL_SSL
+consumer.security.protocol=SASL_SSL
+consumer.confluent.monitoring.interceptor.security.protocol=SASL_SSL
+producer.sasl.mechanism=PLAIN
+producer.confluent.monitoring.interceptor.sasl.mechanism=PLAIN
+consumer.sasl.mechanism=PLAIN
+consumer.confluent.monitoring.interceptor.sasl.mechanism=PLAIN
+producer.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username\="HWQDLB47A4EYDLKQ" password\="ZZrtBuQm+5In5nwCSnPoy9TENt9WpkNkcVWQFuVUd/FaMaaVf1DGrKdGiD/KxoT7";
+producer.confluent.monitoring.interceptor.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username\="HWQDLB47A4EYDLKQ" password\="ZZrtBuQm+5In5nwCSnPoy9TENt9WpkNkcVWQFuVUd/FaMaaVf1DGrKdGiD/KxoT7";
+consumer.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username\="HWQDLB47A4EYDLKQ" password\="ZZrtBuQm+5In5nwCSnPoy9TENt9WpkNkcVWQFuVUd/FaMaaVf1DGrKdGiD/KxoT7";
+consumer.confluent.monitoring.interceptor.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username\="HWQDLB47A4EYDLKQ" password\="ZZrtBuQm+5In5nwCSnPoy9TENt9WpkNkcVWQFuVUd/FaMaaVf1DGrKdGiD/KxoT7";
+
+# Confluent Schema Registry for Kafka Connect
+value.converter=io.confluent.connect.avro.AvroConverter
+value.converter.basic.auth.credentials.source=USER_INFO
+value.converter.schema.registry.basic.auth.user.info=DEVXOMUULJZALNZ7:vqpwKTXw5UaZbSoP9PDFaDIKqbxMMlyFWg0yGK/QutI5UUg1qe91J+SdZhIAzhG5
+value.converter.schema.registry.url=https://psrc-4v1qj.eu-central-1.aws.confluent.cloud

@@ -2,11 +2,16 @@
     "aggregations": [
         {
             "agg": "SUM",
-            "metric": "io.confluent.kafka.server/sent_bytes/delta"
+            "metric": "io.confluent.kafka.server/retained_bytes"
         }
     ],
     "filter": {
         "filters": [
+            {
+                 "field": "metric.label.topic",
+                 "op": "EQ",
+                 "value": "OpenTSx_Events"
+            },
             {
                 "field": "metric.label.cluster_id",
                 "op": "EQ",
@@ -15,12 +20,12 @@
         ],
         "op": "AND"
     },
-    "granularity": "PT1M",
+    "granularity": "PT1H",
     "group_by": [
         "metric.label.topic"
     ],
     "intervals": [
-        "2019-12-19T11:00:00-05:00/2019-12-19T11:05:00-05:00"
+        "2020-03-06T10:00:00-00:00/P0Y0M0DT2H0M0S"
     ],
     "limit": 25
 }
